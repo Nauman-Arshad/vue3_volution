@@ -1,5 +1,5 @@
+
 <template>
-<div>
   <!-- <h5>Hello {{name}}</h5>
   <div v-html="channel"></div>
   <h2 v-bind:id="headingId">Heading</h2>
@@ -16,14 +16,22 @@
   <h2>Nauman</h2>
   <h2>Vue</h2>
   </div> -->
-  <template>
+  <!-- <template>
   <h2 v-if="num === 0">Number is 0</h2>
   <h2 v-else-if="num > 0">Number is +</h2>
   <h2 v-else-if="num < 0">Number is -</h2>
   <h2 v-else>Not a Number</h2>
   </template>
-  <h2 v-show="showElement">using v-show</h2>
-</div>
+  <h2 v-show="showElement">using v-show</h2> -->
+  <!-- <h5 v-for="name in names" :key="name">{{name}}</h5>
+  <h5 v-for="name in fullnames" :key="name.first">{{name.first}} {{name.last}}</h5> -->
+<form>
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" v-model="formValues.name">
+  </div>
+</form>
+
 </template>
 
 <script>
@@ -38,7 +46,16 @@ export default {
       // isSoldout: true
       // num: 12,
       // display: true
-      showElement: true
+      // showElement: true
+      // names: ['Nauman', 'Nan', 'ken', 'Nap'],
+      // fullnames: [
+      //   { first: 'Nan', last: 'War' },
+      //   {first: 'Loop', last: 'J'},
+      //   { first: 'Man', last: 'Jes' }
+      // ]
+      formValues: {
+        name: ''
+      }
     };
   }
 }
